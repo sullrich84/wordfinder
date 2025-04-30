@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "alledeutschenwoerter"
+name = "wordfinder"
 version = "0.1.0"
 description = ""
-authors = ["Sebastian Ullrich <sebastian.ullrich@rtl-extern.de>"]
+authors = ["Sebastian Ullrich <sebastian.ullrich@deepsource.de>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
