@@ -25,6 +25,7 @@ def search(char_sum: list[str], query: str, word_list: str):
 
 
 def search_all(char_sum: str, query: str):
+    print(f"Query: {query}")
     normalized_char_sum = list(char_sum.upper())
     normalized_query = query.upper()
     for word_list in glob.glob("wordlists/*.txt"):
@@ -34,7 +35,14 @@ def search_all(char_sum: str, query: str):
 charsum = sys.argv[1]
 
 if len(sys.argv) > 2:
-    query = sys.argv[2]
+    q = sys.argv[2]
+    query = ""
+    for c in q:
+        if c.isdigit():
+            query += int(c) * "_"
+        else:
+            query += c
+
     search_all(charsum, query)
 else:
     for n in range(3, len(charsum) + 1):
